@@ -133,3 +133,7 @@ table {
 body {
   color: #333;
 }
+
+div {
+  padding: 0.5rem;
+}

@@ -9,6 +9,7 @@ import BooleanSwitch from "./components/3/BooleanSwitch";
 import ControlledInput from "./components/4/ControlledInput";
 import ClickTrackingSimple from "./components/5/ClickTrackingSimple";
 import SimpleCalculator from "./components/6/SimpleCalculator";
+import TimeBasedGreeting from "./components/7/TimeBasedGreeting";
 
 export default function App() {
   const items = [
@@ -18,6 +19,7 @@ export default function App() {
     { id: 4, title: "Controlled Input", component: <ControlledInput /> },
     { id: 5, title: "Click Tracking", component: <ClickTrackingSimple /> },
     { id: 6, title: "Simple Calculator", component: <SimpleCalculator /> },
+    { id: 7, title: "Time Based Greeting", component: <TimeBasedGreeting /> },
   ];
 
   const [selectedId, setSelectedId] = useState(items?.length);
