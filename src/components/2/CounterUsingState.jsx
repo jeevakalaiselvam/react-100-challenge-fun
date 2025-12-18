@@ -16,7 +16,7 @@ export default function CounterUsingState() {
           PLUS
         </button>
       </div>
-      <div>{count}</div>
+      <div style={{ padding: "1rem" }}>{count}</div>
       <div>
         <button
           onClick={() => {

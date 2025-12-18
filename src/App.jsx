@@ -5,14 +5,16 @@ import "./App.css";
 import styled from "styled-components";
 import SimpleJSX from "./components/1/SimpleJSX";
 import CounterUsingState from "./components/2/CounterUsingState";
+import BooleanSwitch from "./components/3/BooleanSwitch";
 
 export default function App() {
   const items = [
     { id: 1, title: "Simple JSX", component: <SimpleJSX /> },
     { id: 2, title: "Counter App", component: <CounterUsingState /> },
+    { id: 3, title: "Boolean Switch", component: <BooleanSwitch /> },
   ];
 
-  const [selectedId, setSelectedId] = useState(items?.length - 1);
+  const [selectedId, setSelectedId] = useState(items?.length);
 
   const selectedItem = items?.find((item) => item.id == selectedId);
 
@@ -39,7 +41,7 @@ export default function App() {
 const TabItem = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   width: 100%;
   background-color: ${(props) => (props.active ? "#ffffff" : "#f0eff2")};
   padding: 0.5rem 0.25rem;
