@@ -8,6 +8,7 @@ import CounterUsingState from "./components/2/CounterUsingState";
 import BooleanSwitch from "./components/3/BooleanSwitch";
 import ControlledInput from "./components/4/ControlledInput";
 import ClickTrackingSimple from "./components/5/ClickTrackingSimple";
+import SimpleCalculator from "./components/6/SimpleCalculator";
 
 export default function App() {
   const items = [
@@ -16,6 +17,7 @@ export default function App() {
     { id: 3, title: "Boolean Switch", component: <BooleanSwitch /> },
     { id: 4, title: "Controlled Input", component: <ControlledInput /> },
     { id: 5, title: "Click Tracking", component: <ClickTrackingSimple /> },
+    { id: 6, title: "Simple Calculator", component: <SimpleCalculator /> },
   ];
 
   const [selectedId, setSelectedId] = useState(items?.length);
