@@ -1,0 +1,610 @@
+1. Hello React
+
+Concepts: JSX, functional components
+Description:
+Create a single functional component that renders static JSX. Learn how JSX compiles to React.createElement, how components return UI, and how React mounts to the DOM.
+
+2. Counter App
+
+Concepts: useState, event handlers
+Description:
+Implement increment, decrement, and reset. Understand state updates, re-renders, and why state must not be mutated directly.
+
+3. Toggle Switch
+
+Concepts: Boolean state, conditional rendering
+Description:
+Build a toggle button that switches between ON and OFF states and conditionally renders text and styles.
+
+4. Live Text Preview
+
+Concepts: Controlled inputs
+Description:
+Create an input field where typed text is immediately reflected elsewhere in the UI. Learn why React “controls” form inputs.
+
+5. Click Tracker
+
+Concepts: State batching
+Description:
+Track clicks across multiple buttons and understand how React batches state updates.
+
+6. Simple Calculator
+
+Concepts: Multiple state values
+Description:
+Handle numeric input, operations, and result rendering while managing multiple related state variables.
+
+7. Time-Based Greeting
+
+Concepts: Conditional rendering
+Description:
+Display “Good Morning / Afternoon / Evening” based on system time at render.
+
+8. Button Disable Logic
+
+Concepts: Derived state
+Description:
+Disable submit until input conditions are met. Learn when not to store state.
+
+9. Color Changer
+
+Concepts: Inline styles, props
+Description:
+Change background colors dynamically based on user actions.
+
+10. Static List Renderer
+
+Concepts: Array .map(), key
+Description:
+Render a list of items from an array and understand why keys are mandatory.
+
+11. Dynamic List Add
+
+Concepts: Immutable updates
+Description:
+Add new items to a list without mutating state.
+
+12. Basic Todo App
+
+Concepts: Form handling
+Description:
+Create todos using controlled inputs and render them dynamically.
+
+13. Delete Todo
+
+Concepts: Array filtering
+Description:
+Remove items using immutable filtering.
+
+14. Edit Todo
+
+Concepts: Lifting state
+Description:
+Edit todos by lifting state to a parent component.
+
+15. Reusable Component Demo
+
+Concepts: Props design
+Description:
+Refactor repeated UI into reusable components with configurable props.
+
+LEVEL 2 — COMPONENT COMPOSITION (16–30)
+
+Goal: Build reusable UI primitives.
+
+16. Reusable Button System
+
+Concepts: Component API design
+Description:
+Build buttons supporting size, variant, disabled, and click behavior.
+
+17. Card Layout System
+
+Concepts: children prop
+Description:
+Create a generic card wrapper that can render arbitrary content.
+
+18. Modal Component
+
+Concepts: Portals, conditional rendering
+Description:
+Implement a modal that overlays the page and closes on backdrop click.
+
+19. Tabs Component
+
+Concepts: State-driven layout
+Description:
+Switch visible content using tab navigation.
+
+20. Accordion
+
+Concepts: Controlled expansion
+Description:
+Allow only one section open at a time.
+
+21. Dropdown Menu
+
+Concepts: Event handling
+Description:
+Open/close menu and handle outside clicks.
+
+22. Tooltip
+
+Concepts: Mouse events
+Description:
+Show contextual info on hover.
+
+23. Avatar Component
+
+Concepts: Fallback rendering
+Description:
+Display image or user initials if image fails.
+
+24. Toast Notifications
+
+Concepts: Timers, effects
+Description:
+Show auto-dismiss notifications with animations.
+
+25. Pagination
+
+Concepts: Derived data
+Description:
+Paginate a dataset and navigate pages.
+
+26. Search Filter
+
+Concepts: Filtering state
+Description:
+Filter items in real time based on input.
+
+27. Dynamic Form Fields
+
+Concepts: Array state
+Description:
+Add/remove input fields dynamically.
+
+28. Rating Component
+
+Concepts: Interactive UI
+Description:
+Implement star-based ratings with hover effects.
+
+29. Stepper
+
+Concepts: Sequential state
+Description:
+Move forward/backward through steps.
+
+30. Theme Switcher
+
+Concepts: Global UI state
+Description:
+Toggle light/dark theme using Context.
+
+LEVEL 3 — SIDE EFFECTS & ASYNC (31–45)
+
+Goal: Handle time, effects, and APIs.
+
+31. Countdown Timer
+
+Concepts: useEffect, cleanup
+Description:
+Implement an interval timer with proper cleanup.
+
+32. Stopwatch
+
+Concepts: useRef
+Description:
+Avoid re-renders while tracking time.
+
+33. Debounced Search
+
+Concepts: Effect timing
+Description:
+Delay API calls until typing stops.
+
+34. Window Resize Tracker
+
+Concepts: Event listeners
+Description:
+Track screen size safely.
+
+35. API Fetch App
+
+Concepts: Async effects
+Description:
+Fetch and display remote data.
+
+36. Loading & Error States
+
+Concepts: Async UI states
+Description:
+Handle loading, success, and error conditions.
+
+37. Retry Fetch Logic
+
+Concepts: Controlled effects
+Description:
+Allow retries without infinite loops.
+
+38. Infinite Scroll
+
+Concepts: Pagination + effects
+Description:
+Load data as user scrolls.
+
+39. Polling App
+
+Concepts: Intervals
+Description:
+Fetch data at fixed intervals.
+
+40. Auto-Save Form
+
+Concepts: Debounced effects
+Description:
+Save user input automatically.
+
+41. Document Title Manager
+
+Concepts: Side effects
+Description:
+Update browser tab title dynamically.
+
+42. Online/Offline Detector
+
+Concepts: Browser APIs
+Description:
+React to network status changes.
+
+43. Scroll Position Tracker
+
+Concepts: Performance
+Description:
+Track scroll without excessive renders.
+
+44. Delayed Modal
+
+Concepts: Timers
+Description:
+Show modal after delay.
+
+45. API Rate Limit Handler
+
+Concepts: Error recovery
+Description:
+Handle HTTP error responses gracefully.
+
+LEVEL 4 — STATE ARCHITECTURE (46–60)
+46. Shopping Cart
+
+Concepts: State normalization
+Description:
+Add/remove/update cart items correctly.
+
+47. Product Filter & Sort
+
+Concepts: Derived state
+Description:
+Filter and sort products efficiently.
+
+48. Multi-Step Form
+
+Concepts: State orchestration
+Description:
+Persist data across steps.
+
+49. Wizard Form
+
+Concepts: Conditional routing
+Description:
+Step-by-step flow with validation.
+
+50. Nested Comments
+
+Concepts: Recursive rendering
+Description:
+Render infinite comment depth.
+
+51. Tree View
+
+Concepts: Recursive components
+Description:
+Expandable hierarchical UI.
+
+52. Drag & Drop List
+
+Concepts: DOM interaction
+Description:
+Reorder items visually.
+
+53. Controlled vs Uncontrolled Inputs
+
+Concepts: Refs vs state
+Description:
+Compare form handling approaches.
+
+54. Global Counter
+
+Concepts: Context API
+Description:
+Share state across components.
+
+55. Auth Context
+
+Concepts: Provider pattern
+Description:
+Manage logged-in user state.
+
+56. Role-Based UI
+
+Concepts: Conditional access
+Description:
+Restrict UI by role.
+
+57. Language Switcher
+
+Concepts: Context
+Description:
+Switch app language dynamically.
+
+58. Preferences Persistence
+
+Concepts: LocalStorage
+Description:
+Persist UI preferences.
+
+59. Form Validation System
+
+Concepts: Validation logic
+Description:
+Reusable validation rules.
+
+60. Undo / Redo System
+
+Concepts: State history
+Description:
+Implement reversible actions.
+
+LEVEL 5 — PERFORMANCE & INTERNALS (61–75)
+61. Render Counter
+
+Concepts: Render behavior
+Description:
+Visualize re-renders.
+
+62. Memoized Component
+
+Concepts: React.memo
+Description:
+Prevent unnecessary renders.
+
+63. Expensive Calculation Optimizer
+
+Concepts: useMemo
+Description:
+Cache heavy computations.
+
+64. Stable Callback Demo
+
+Concepts: useCallback
+Description:
+Avoid prop reference changes.
+
+65. Virtualized List
+
+Concepts: Windowing
+Description:
+Render large lists efficiently.
+
+66. Controlled Re-render Experiment
+
+Concepts: State colocation
+Description:
+Move state to reduce renders.
+
+67. Custom Hook – useFetch
+
+Concepts: Hook abstraction
+Description:
+Extract reusable logic.
+
+68. Custom Hook – useToggle
+
+Concepts: Reusability
+Description:
+Encapsulate boolean logic.
+
+69. Form Hook
+
+Concepts: Abstraction
+Description:
+Create reusable form handler.
+
+70. Lazy Loading
+
+Concepts: React.lazy, Suspense
+Description:
+Load components on demand.
+
+71. Code Splitting
+
+Concepts: Bundle optimization
+Description:
+Split app by routes.
+
+72. Error Boundary
+
+Concepts: Fault isolation
+Description:
+Prevent app crashes.
+
+73. Ref Forwarding
+
+Concepts: forwardRef
+Description:
+Expose DOM nodes.
+
+74. Imperative Handle
+
+Concepts: useImperativeHandle
+Description:
+Control child behavior from parent.
+
+75. Controlled Animation System
+
+Concepts: State-driven animation
+Description:
+Animate UI via state.
+
+LEVEL 6 — REAL APPLICATIONS (76–100)
+76. Authentication Flow
+
+Concepts: Auth architecture
+Description:
+Login/logout with protected routes.
+
+77. Role-Based Dashboard
+
+Concepts: Conditional routing
+Description:
+Different UI per role.
+
+78. Blog Platform
+
+Concepts: CRUD operations
+Description:
+Create/edit/delete posts.
+
+79. Comment System
+
+Concepts: Nested state
+Description:
+Threaded comments.
+
+80. File Upload UI
+
+Concepts: Controlled files
+Description:
+Handle uploads and progress.
+
+81. Image Gallery
+
+Concepts: Performance
+Description:
+Lazy load images.
+
+82. Real-Time Chat UI
+
+Concepts: WebSockets
+Description:
+Live messaging UI.
+
+83. Notification Center
+
+Concepts: Global state
+Description:
+Manage alerts.
+
+84. Dashboard Analytics
+
+Concepts: Data visualization
+Description:
+Render charts from API data.
+
+85. Settings Panel
+
+Concepts: Preferences management
+Description:
+Persist user settings.
+
+86. Kanban Board
+
+Concepts: Complex state
+Description:
+Drag tasks across columns.
+
+87. Calendar App
+
+Concepts: Date logic
+Description:
+Schedule events.
+
+88. Search Engine UI
+
+Concepts: Debouncing
+Description:
+Paginated search results.
+
+89. Multi-Tenant App
+
+Concepts: App configuration
+Description:
+Isolate data per tenant.
+
+90. Feature Flag System
+
+Concepts: Conditional rendering
+Description:
+Enable/disable features.
+
+91. Admin Panel
+
+Concepts: Secure UI
+Description:
+Manage users and data.
+
+92. Offline-First App
+
+Concepts: Cache strategy
+Description:
+Work without network.
+
+93. PWA App
+
+Concepts: Service workers
+Description:
+Installable app.
+
+94. Form Builder
+
+Concepts: Dynamic schemas
+Description:
+Build forms from JSON.
+
+95. Workflow Engine
+
+Concepts: State machines
+Description:
+Conditional workflows.
+
+96. Micro-Frontend Host
+
+Concepts: App composition
+Description:
+Load independent apps.
+
+97. UI Component Library
+
+Concepts: API consistency
+Description:
+Reusable design system.
+
+98. Performance Audit App
+
+Concepts: Profiling
+Description:
+Measure render cost.
+
+99. Accessibility Audit UI
+
+Concepts: a11y
+Description:
+Keyboard and screen reader support.
+
+100. Production-Ready SaaS App
+
+Concepts: Everything
+Description:
+Authentication, routing, performance, error handling, and deployment.

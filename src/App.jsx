@@ -1,0 +1,75 @@
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
+import styled from "styled-components";
+import SimpleJSX from "./components/project1/SimpleJSX";
+
+export default function App() {
+  const [selectedId, setSelectedId] = useState(1);
+
+  const items = [{ id: 1, title: "Simple JSX", component: <SimpleJSX /> }];
+
+  const selectedItem = items?.find((item) => item.id == selectedId);
+
+  return (
+    <Container>
+      <Sidebar>
+        {items?.map((item) => {
+          return (
+            <TabItem active={selectedId == item?.id}>{item.title}</TabItem>
+          );
+        })}
+      </Sidebar>
+      <Content>{selectedItem.component}</Content>
+    </Container>
+  );
+}
+
+const TabItem = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: ${(props) => (props.active ? "#ffffff" : "#f0eff2")};
+  padding: 0.5rem 0.25rem;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: 500;
+
+  &:hover {
+    background-color: #fefefe;
+  }
+`;
+
+const Container = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100vw;
+  min-height: 100vh;
+`;
+
+const Sidebar = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  max-height: 100vh;
+  overflow: scroll;
+  width: 300px;
+  background-color: #f0eff2;
+  padding: 0.25rem;
+  flex-direction: column;
+`;
+
+const Content = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 1;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+  flex-direction: column;
+  padding: 1rem;
+`;
