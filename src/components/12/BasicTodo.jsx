@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import { v4 as uuidv4 } from "uuid";
 
 export default function BasicTodo() {
   const [todos, setTodos] = useState([]);
   const [title, setTitle] = useState("");
 
   useEffect(() => {}, []);
+
+  console.log(todos);
 
   return (
     <Container>
@@ -15,10 +18,32 @@ export default function BasicTodo() {
             <Todo>
               <input
                 type="checkbox"
-                value={todo?.isCompleted}
+                checked={todo?.isCompleted}
+                onChange={(e) => {
+                  let isChecked = e.target.checked;
+                  console.log({ todo, isChecked });
+                  setTodos((old) => [
+                    ...old?.map((innerTodo) => {
+                      if (innerTodo.id == todo.id) {
+                        return {
+                          ...innerTodo,
+                          isCompleted: Boolean(isChecked),
+                        };
+                      } else {
+                        return { ...innerTodo };
+                      }
+                    }),
+                  ]);
+                }}
                 style={{ marginRight: "1rem" }}
               />
-              <label>{todo.title}</label>
+              <label
+                style={{
+                  textDecoration: todo.isCompleted ? "line-through" : "none",
+                }}
+              >
+                {todo.title}
+              </label>
             </Todo>
           );
         })}
@@ -33,7 +58,11 @@ export default function BasicTodo() {
         />
         <button
           onClick={() => {
-            let todoToCreate = { title: title, isCompleted: false };
+            let todoToCreate = {
+              title: title,
+              isCompleted: false,
+              id: uuidv4(),
+            };
             setTitle("");
             setTodos((old) => [...old, todoToCreate]);
           }}

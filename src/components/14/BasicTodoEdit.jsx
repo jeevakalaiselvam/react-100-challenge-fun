@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { MdDelete } from "react-icons/md";
+import { FaCheck } from "react-icons/fa";
+import { MdDelete, MdModeEdit } from "react-icons/md";
 import styled from "styled-components";
 import { v4 as uuidv4 } from "uuid";
 
-export default function BasicTodoDelete() {
+export default function BasicTodoEdit() {
   const [todos, setTodos] = useState([]);
   const [title, setTitle] = useState("");
+  const [idsUnderEdit, setIdsUnderEdit] = useState([]);
+  const [idsEditMap, setIdsEditMap] = useState([]);
 
   useEffect(() => {}, []);
 
@@ -36,13 +39,71 @@ export default function BasicTodoDelete() {
                 }}
                 style={{ marginRight: "1rem" }}
               />
-              <label
-                style={{
-                  textDecoration: todo.isCompleted ? "line-through" : "none",
-                }}
-              >
-                {todo.title}
-              </label>
+
+              {!idsUnderEdit?.includes(todo.id) && (
+                <label
+                  style={{
+                    textDecoration: todo.isCompleted ? "line-through" : "none",
+                  }}
+                >
+                  {todo.title}
+                </label>
+              )}
+              {idsUnderEdit?.includes(todo.id) && (
+                <input
+                  type="text"
+                  value={idsEditMap[todo.id] ?? ""}
+                  onChange={(e) => {
+                    let newValue = e.target.value;
+                    setIdsEditMap((old) => ({ ...old, [todo.id]: newValue }));
+                  }}
+                  style={{ marginRight: "1rem" }}
+                />
+              )}
+              {!idsUnderEdit?.includes(todo.id) && (
+                <span
+                  style={{
+                    fontSize: "1rem",
+                    color: "black",
+                    display: "flex",
+                    cursor: "pointer",
+                  }}
+                  onClick={() => {
+                    setIdsEditMap((old) => ({ ...old, [todo.id]: todo.title }));
+                    setIdsUnderEdit((old) => [...old, todo.id]);
+                  }}
+                >
+                  <MdModeEdit />
+                </span>
+              )}
+              {idsUnderEdit?.includes(todo.id) && (
+                <span
+                  style={{
+                    fontSize: "1rem",
+                    color: "black",
+                    display: "flex",
+                    cursor: "pointer",
+                  }}
+                  onClick={() => {
+                    let newTodos = [
+                      ...todos.map((oldTodo) => {
+                        if (oldTodo.id == todo.id) {
+                          return { ...oldTodo, title: idsEditMap[todo.id] };
+                        } else {
+                          return { ...oldTodo };
+                        }
+                      }),
+                    ];
+                    setTodos(newTodos);
+
+                    setIdsUnderEdit((old) => [
+                      ...old?.filter((id) => id != todo.id),
+                    ]);
+                  }}
+                >
+                  <FaCheck />
+                </span>
+              )}
               <span
                 style={{
                   fontSize: "1rem",
