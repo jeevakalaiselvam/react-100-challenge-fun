@@ -132,8 +132,11 @@ table {
 
 body {
   color: #333;
+  padding: 0;
+  margin: 0;
 }
 
-div {
-  padding: 0.5rem;
+input {
+  outline: none;
+  padding: none;
 }

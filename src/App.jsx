@@ -10,6 +10,7 @@ import ControlledInput from "./components/4/ControlledInput";
 import ClickTrackingSimple from "./components/5/ClickTrackingSimple";
 import SimpleCalculator from "./components/6/SimpleCalculator";
 import TimeBasedGreeting from "./components/7/TimeBasedGreeting";
+import InputConditions from "./components/8/InputConditions";
 
 export default function App() {
   const items = [
@@ -20,6 +21,7 @@ export default function App() {
     { id: 5, title: "Click Tracking", component: <ClickTrackingSimple /> },
     { id: 6, title: "Simple Calculator", component: <SimpleCalculator /> },
     { id: 7, title: "Time Based Greeting", component: <TimeBasedGreeting /> },
+    { id: 8, title: "Input Conditions", component: <InputConditions /> },
   ];
 
   const [selectedId, setSelectedId] = useState(items?.length);
@@ -46,7 +48,7 @@ export default function App() {
   );
 }
 
-const TabItem = styled.div`
+const TabItem = styled.section`
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -57,13 +59,14 @@ const TabItem = styled.div`
   border-radius: 4px;
   font-weight: 500;
   margin-bottom: 0.25rem;
+  font-size: 0.8rem;
 
   &:hover {
     background-color: #fefefe;
   }
 `;
 
-const Container = styled.div`
+const Container = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -71,7 +74,7 @@ const Container = styled.div`
   min-height: 100vh;
 `;
 
-const Sidebar = styled.div`
+const Sidebar = styled.section`
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -84,7 +87,7 @@ const Sidebar = styled.div`
   flex-direction: column;
 `;
 
-const Content = styled.div`
+const Content = styled.section`
   display: flex;
   align-items: center;
   justify-content: flex-start;
