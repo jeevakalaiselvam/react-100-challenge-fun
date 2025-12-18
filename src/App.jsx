@@ -11,6 +11,7 @@ import TimeBasedGreeting from "./components/7/TimeBasedGreeting";
 import InputConditions from "./components/8/InputConditions";
 import BackgroundColor from "./components/9/BackgroundColor";
 import StaticListRenderer from "./components/10/StaticListRenderer";
+import ImmutableListUpdate from "./components/11/ImmutableListUpdate";
 
 export default function App() {
   const items = [
@@ -27,6 +28,11 @@ export default function App() {
       id: 10,
       title: "Static List Renderer",
       component: <StaticListRenderer />,
+    },
+    {
+      id: 11,
+      title: "Immutable List Update",
+      component: <ImmutableListUpdate />,
     },
   ];
 

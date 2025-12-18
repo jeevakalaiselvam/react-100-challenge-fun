@@ -1,7 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
 export default function Atom() {
+  const [TMP, SETTMP] = useState(null);
+
+  useEffect(() => {}, []);
+
   return (
     <Container>
       <Top></Top>
