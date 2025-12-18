@@ -11,6 +11,7 @@ import ClickTrackingSimple from "./components/5/ClickTrackingSimple";
 import SimpleCalculator from "./components/6/SimpleCalculator";
 import TimeBasedGreeting from "./components/7/TimeBasedGreeting";
 import InputConditions from "./components/8/InputConditions";
+import BackgroundColor from "./components/9/BackgroundColor";
 
 export default function App() {
   const items = [
@@ -22,6 +23,7 @@ export default function App() {
     { id: 6, title: "Simple Calculator", component: <SimpleCalculator /> },
     { id: 7, title: "Time Based Greeting", component: <TimeBasedGreeting /> },
     { id: 8, title: "Input Conditions", component: <InputConditions /> },
+    { id: 9, title: "Background Color", component: <BackgroundColor /> },
   ];
 
   const [selectedId, setSelectedId] = useState(items?.length);
