@@ -16,7 +16,7 @@ export default function SimpleCalculator() {
 
   const calculateResult = () => {
     let innerResult = eval(result);
-    setResult(String(innerResult));
+    setResult(String(innerResult?.toFixed(2)));
   };
 
   return (
