@@ -6,12 +6,14 @@ import styled from "styled-components";
 import SimpleJSX from "./components/1/SimpleJSX";
 import CounterUsingState from "./components/2/CounterUsingState";
 import BooleanSwitch from "./components/3/BooleanSwitch";
+import ControlledInput from "./components/4/ControlledInput";
 
 export default function App() {
   const items = [
     { id: 1, title: "Simple JSX", component: <SimpleJSX /> },
     { id: 2, title: "Counter App", component: <CounterUsingState /> },
     { id: 3, title: "Boolean Switch", component: <BooleanSwitch /> },
+    { id: 4, title: "Controlled Input", component: <ControlledInput /> },
   ];
 
   const [selectedId, setSelectedId] = useState(items?.length);
