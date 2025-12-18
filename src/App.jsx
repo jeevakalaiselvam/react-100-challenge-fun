@@ -13,6 +13,8 @@ import BackgroundColor from "./components/9/BackgroundColor";
 import StaticListRenderer from "./components/10/StaticListRenderer";
 import ImmutableListUpdate from "./components/11/ImmutableListUpdate";
 import BasicTodo from "./components/12/BasicTodo";
+import BasicTodoDelete from "./components/13/BasicTodoDelete";
+import { v4 as uuidv4 } from "uuid";
 
 export default function App() {
   const items = [
@@ -36,6 +38,7 @@ export default function App() {
       component: <ImmutableListUpdate />,
     },
     { id: 12, title: "Basic Todo", component: <BasicTodo /> },
+    { id: 13, title: "Basic Todo Delete", component: <BasicTodoDelete /> },
   ];
 
   const [selectedId, setSelectedId] = useState(1);
