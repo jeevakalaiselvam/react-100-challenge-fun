@@ -3,12 +3,16 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 import styled from "styled-components";
-import SimpleJSX from "./components/project1/SimpleJSX";
+import SimpleJSX from "./components/1/SimpleJSX";
+import CounterUsingState from "./components/2/CounterUsingState";
 
 export default function App() {
-  const [selectedId, setSelectedId] = useState(1);
+  const items = [
+    { id: 1, title: "Simple JSX", component: <SimpleJSX /> },
+    { id: 2, title: "Counter App", component: <CounterUsingState /> },
+  ];
 
-  const items = [{ id: 1, title: "Simple JSX", component: <SimpleJSX /> }];
+  const [selectedId, setSelectedId] = useState(items?.length - 1);
 
   const selectedItem = items?.find((item) => item.id == selectedId);
 
@@ -17,7 +21,13 @@ export default function App() {
       <Sidebar>
         {items?.map((item) => {
           return (
-            <TabItem active={selectedId == item?.id}>{item.title}</TabItem>
+            <TabItem
+              key={item?.id}
+              active={selectedId == item?.id}
+              onClick={() => setSelectedId(item?.id)}
+            >
+              {item.title}
+            </TabItem>
           );
         })}
       </Sidebar>
@@ -36,6 +46,7 @@ const TabItem = styled.div`
   cursor: pointer;
   border-radius: 4px;
   font-weight: 500;
+  margin-bottom: 0.25rem;
 
   &:hover {
     background-color: #fefefe;
@@ -57,7 +68,7 @@ const Sidebar = styled.div`
   min-height: 100vh;
   max-height: 100vh;
   overflow: scroll;
-  width: 300px;
+  width: 250px;
   background-color: #f0eff2;
   padding: 0.25rem;
   flex-direction: column;
