@@ -12,6 +12,7 @@ import InputConditions from "./components/8/InputConditions";
 import BackgroundColor from "./components/9/BackgroundColor";
 import StaticListRenderer from "./components/10/StaticListRenderer";
 import ImmutableListUpdate from "./components/11/ImmutableListUpdate";
+import BasicTodo from "./components/12/BasicTodo";
 
 export default function App() {
   const items = [
@@ -34,6 +35,7 @@ export default function App() {
       title: "Immutable List Update",
       component: <ImmutableListUpdate />,
     },
+    { id: 12, title: "Basic Todo", component: <BasicTodo /> },
   ];
 
   const [selectedId, setSelectedId] = useState(1);
