@@ -1,6 +1,4 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { useEffect, useState } from "react";
 import "./App.css";
 import styled from "styled-components";
 import SimpleJSX from "./components/1/SimpleJSX";
@@ -12,6 +10,7 @@ import SimpleCalculator from "./components/6/SimpleCalculator";
 import TimeBasedGreeting from "./components/7/TimeBasedGreeting";
 import InputConditions from "./components/8/InputConditions";
 import BackgroundColor from "./components/9/BackgroundColor";
+import StaticListRenderer from "./components/10/StaticListRenderer";
 
 export default function App() {
   const items = [
@@ -24,11 +23,20 @@ export default function App() {
     { id: 7, title: "Time Based Greeting", component: <TimeBasedGreeting /> },
     { id: 8, title: "Input Conditions", component: <InputConditions /> },
     { id: 9, title: "Background Color", component: <BackgroundColor /> },
+    {
+      id: 10,
+      title: "Static List Renderer",
+      component: <StaticListRenderer />,
+    },
   ];
 
-  const [selectedId, setSelectedId] = useState(items?.length);
+  const [selectedId, setSelectedId] = useState(1);
 
   const selectedItem = items?.find((item) => item.id == selectedId);
+
+  useEffect(() => {
+    setSelectedId(items?.length);
+  }, []);
 
   return (
     <Container>
