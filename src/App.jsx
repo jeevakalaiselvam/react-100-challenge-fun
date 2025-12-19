@@ -16,6 +16,7 @@ import BasicTodo from "./components/12/BasicTodo";
 import BasicTodoDelete from "./components/13/BasicTodoDelete";
 import { v4 as uuidv4 } from "uuid";
 import BasicTodoEdit from "./components/14/BasicTodoEdit";
+import ResusableComponent from "./components/15/ResusableComponent ";
 
 export default function App() {
   const items = [
@@ -41,6 +42,7 @@ export default function App() {
     { id: 12, title: "Basic Todo", component: <BasicTodo /> },
     { id: 13, title: "Basic Todo Delete", component: <BasicTodoDelete /> },
     { id: 14, title: "Basic Todo Edit", component: <BasicTodoEdit /> },
+    { id: 15, title: "Reusable Component", component: <ResusableComponent /> },
   ];
 
   const [selectedId, setSelectedId] = useState(1);
