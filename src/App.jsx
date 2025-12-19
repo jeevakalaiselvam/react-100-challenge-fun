@@ -18,6 +18,7 @@ import { v4 as uuidv4 } from "uuid";
 import BasicTodoEdit from "./components/14/BasicTodoEdit";
 import ResusableComponent from "./components/15/ResusableComponent ";
 import ResuableButton from "./components/16/ResuableButton";
+import CardWrapper from "./components/17/CardWrapper";
 
 export default function App() {
   const items = [
@@ -45,6 +46,7 @@ export default function App() {
     { id: 14, title: "Basic Todo Edit", component: <BasicTodoEdit /> },
     { id: 15, title: "Reusable Component", component: <ResusableComponent /> },
     { id: 16, title: "Reusable Button", component: <ResuableButton /> },
+    { id: 17, title: "Card Wrappper", component: <CardWrapper /> },
   ];
 
   const [selectedId, setSelectedId] = useState(1);

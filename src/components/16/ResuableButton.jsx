@@ -6,11 +6,11 @@ import {
   generateLightTextColorForLightBg,
 } from "../../helpers/colorHelper";
 
-function Button({ color, title, textColor }) {
+function Button({ color, title, textColor, type }) {
   useEffect(() => {}, []);
 
   return (
-    <ButtonContainer color={color} textColor={textColor}>
+    <ButtonContainer color={color} textColor={textColor} type={type ?? "solid"}>
       {title}
     </ButtonContainer>
   );
@@ -27,6 +27,10 @@ const ButtonContainer = styled.div`
   color: ${(props) => props.textColor};
   cursor: pointer;
   margin-bottom: 1rem;
+  border: ${(props) =>
+    props.type == "dashed"
+      ? `2px dashed ${generateDarkTextColorForLightBg(props.color, 50)}`
+      : ""};
 
   &:hover {
     background-color: ${(props) =>
@@ -43,9 +47,19 @@ export default function ResuableButton() {
       <Bottom>
         <Button color={"#1B7F79"} textColor={"#FEFEFE"} title={"Button 1"} />
         <Button color={"#FF4858"} textColor={"#FEFEFE"} title={"Button 2"} />
-        <Button color={"#44803F"} textColor={"#FEFEFE"} title={"Button 3"} />
+        <Button
+          color={"#44803F"}
+          textColor={"#FEFEFE"}
+          title={"Button 3"}
+          type={"dashed"}
+        />
         <Button color={"#90A19D"} textColor={"#FEFEFE"} title={"Button 4"} />
-        <Button color={"#027368"} textColor={"#FEFEFE"} title={"Button 5"} />
+        <Button
+          color={"#027368"}
+          textColor={"#FEFEFE"}
+          title={"Button 5"}
+          type={"dashed"}
+        />
       </Bottom>
     </Container>
   );
