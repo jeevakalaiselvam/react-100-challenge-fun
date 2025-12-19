@@ -81,7 +81,7 @@ const TabItem = styled.section`
   justify-content: flex-start;
   width: 100%;
   background-color: ${(props) => (props.active ? "#ffffff" : "#f0eff2")};
-  padding: 0.5rem 0.25rem;
+  padding: 2px 4px;
   cursor: pointer;
   border-radius: 4px;
   font-weight: 500;
