@@ -88,11 +88,17 @@ export default function ModalExample() {
   useEffect(() => {}, []);
 
   return (
-    <Container id="custom-portal-modal">
+    <Container
+      id="custom-portal-modal"
+      onClick={(e) => {
+        setShowModal(false);
+      }}
+    >
       <Top>
         {!showModal && (
           <button
-            onClick={() => {
+            onClick={(e) => {
+              e.stopPropagation();
               setShowModal(true);
             }}
           >
@@ -101,7 +107,8 @@ export default function ModalExample() {
         )}
         {showModal && (
           <button
-            onClick={() => {
+            onClick={(e) => {
+              e.stopPropagation();
               setShowModal(false);
             }}
           >
@@ -109,7 +116,6 @@ export default function ModalExample() {
           </button>
         )}
       </Top>
-      <Bottom></Bottom>
       {showModal &&
         createPortal(
           <ModalSimple
@@ -120,7 +126,7 @@ export default function ModalExample() {
               setShowModal(false);
             }}
           />,
-          document.getElementById("custom-portal-modal")
+          document.body
         )}
     </Container>
   );
@@ -145,6 +151,8 @@ const Bottom = styled.div`
 const Container = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
 `;
