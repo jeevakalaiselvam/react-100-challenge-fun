@@ -20,6 +20,7 @@ import ResusableComponent from "./components/15/ResusableComponent ";
 import ResuableButton from "./components/16/ResuableButton";
 import CardWrapper from "./components/17/CardWrapper";
 import ModalExample from "./components/18/ModalExample";
+import TabNavigatinUsingState from "./components/19/TabNavigatinUsingState";
 
 export default function App() {
   const items = [
@@ -49,6 +50,11 @@ export default function App() {
     { id: 16, title: "Reusable Button", component: <ResuableButton /> },
     { id: 17, title: "Card Wrappper", component: <CardWrapper /> },
     { id: 18, title: "Modal Example", component: <ModalExample /> },
+    {
+      id: 19,
+      title: "Tabs Navigation Using State",
+      component: <TabNavigatinUsingState />,
+    },
   ];
 
   const [selectedId, setSelectedId] = useState(1);
