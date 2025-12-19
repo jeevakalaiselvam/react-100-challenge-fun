@@ -21,6 +21,7 @@ import ResuableButton from "./components/16/ResuableButton";
 import CardWrapper from "./components/17/CardWrapper";
 import ModalExample from "./components/18/ModalExample";
 import TabNavigatinUsingState from "./components/19/TabNavigatinUsingState";
+import Accordion from "./components/20/Accordion";
 
 export default function App() {
   const items = [
@@ -54,6 +55,11 @@ export default function App() {
       id: 19,
       title: "Tabs Navigation Using State",
       component: <TabNavigatinUsingState />,
+    },
+    {
+      id: 20,
+      title: "Accordion",
+      component: <Accordion />,
     },
   ];
 
