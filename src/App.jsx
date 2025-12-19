@@ -19,6 +19,7 @@ import BasicTodoEdit from "./components/14/BasicTodoEdit";
 import ResusableComponent from "./components/15/ResusableComponent ";
 import ResuableButton from "./components/16/ResuableButton";
 import CardWrapper from "./components/17/CardWrapper";
+import ModalExample from "./components/18/ModalExample";
 
 export default function App() {
   const items = [
@@ -47,6 +48,7 @@ export default function App() {
     { id: 15, title: "Reusable Component", component: <ResusableComponent /> },
     { id: 16, title: "Reusable Button", component: <ResuableButton /> },
     { id: 17, title: "Card Wrappper", component: <CardWrapper /> },
+    { id: 18, title: "Modal Example", component: <ModalExample /> },
   ];
 
   const [selectedId, setSelectedId] = useState(1);
