@@ -22,6 +22,7 @@ import CardWrapper from "./components/17/CardWrapper";
 import ModalExample from "./components/18/ModalExample";
 import TabNavigatinUsingState from "./components/19/TabNavigatinUsingState";
 import Accordion from "./components/20/Accordion";
+import ReactWindow from "./components/21/ReactWindow";
 
 export default function App() {
   const items = [
@@ -60,6 +61,17 @@ export default function App() {
       id: 20,
       title: "Accordion",
       component: <Accordion />,
+    },
+    {
+      id: 21,
+      title: "React Window",
+      component: (
+        <ReactWindow
+          names={new Array(100)
+            ?.fill(1)
+            .map((item, index) => `Item ${index + 1}`)}
+        />
+      ),
     },
   ];
 

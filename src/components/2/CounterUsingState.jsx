@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export default function CounterUsingState() {
   const [count, setCount] = useState(0);
-  const [error, setError] = useState(0);
+  const [error, setError] = useState("");
   return (
     <Container>
       <div>
